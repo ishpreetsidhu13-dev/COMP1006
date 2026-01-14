@@ -29,7 +29,8 @@ $num2= "10";
 function add(int $num1, int $num2) :int {
     return $num1 + $num2;
 }
-echo "<p>" . add ($num1, $num2) ."</p>";
+$result = add($num1, (int)$num2);
+echo "<p>" . $result . "</p>";
 //5. Strict Types & Types Hints
 declare(strict_types=1);
 

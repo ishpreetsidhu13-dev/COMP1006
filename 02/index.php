@@ -36,3 +36,22 @@ declare(strict_types=1);
 
 
 //6. OOP with PHP 
+
+class Person {
+    private string $firstName;
+    private string $lastName;
+    private int $age;
+
+    public function __construct(string $firstName, string $lastName, int $age) {
+        $this->firstName = $firstName;
+        $this->lastName = $lastName;
+        $this->age = $age;
+    }
+
+    public function introduce(): string {
+        return "Hello, my name is " . $this->firstName . " " . $this->lastName . " and I am " . $this->age . " years old.";
+    }
+}
+
+$person = new Person("Harmanjeet", "Singh", 20);
+echo "<p>" . $person->introduce() . "</p>";
